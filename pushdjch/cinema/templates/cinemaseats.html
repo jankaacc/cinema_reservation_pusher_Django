@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{%static 'css/cinema_style.css'  %}" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//js.pusher.com/4.0/pusher.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/cinema.js' %}"></script>
+
+
+</head>
+
+
+<body onload="start({{queryset_seats}}, {{tickets_quan}})">
+
+    <center><div id="screen"><img src="{%static 'images/screen.png'%}" /></div></center>
+	<center><div id="audience"></div></center>
+
+
+<div class="col-md-12 col-md-offset-4">
+     <!--<form method="POST" action="{% url 'cinemaseats' %}" >-->
+
+        <!--{% csrf_token %}-->
+        <!--{{ form.as_p }}-->
+
+        <input type="submit" class="btn btn-warning btn-sm" id="btn-reserve" value="Rezerwuj" />
+
+    <!--</form>-->
+
+</div>
+
+
+    <!--<div id="obj"></div>-->
+    <div id="deb" onclick="sprawdz(33)"></div>
+
+
+    <!--{{ object_list.objects }}-->
+
+    <!--{% for seat in queryset_seats %}-->
+    <!--<li>{{ seat}}</li>-->
+
+    <!--{% endfor %}-->
+
+
+
+
+
+</body>
+</html>

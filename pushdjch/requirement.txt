@@ -1,0 +1,4 @@
+Django==1.10.6
+pusher==1.6
+psycopg2
+
